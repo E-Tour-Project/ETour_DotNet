@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Serilog;
+using Microsoft.EntityFrameworkCore;
 
 namespace Etour_Backend_dotnet;
 
@@ -41,8 +42,10 @@ public class Program
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
 
-            // Add DbContext
-            builder.Services.AddDbContext<Etour_Backend_dotnet.Models.etour_dbContext>();
+            // Add DbContext with Connection String from Configuration
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<Etour_Backend_dotnet.Models.etour_dbContext>(options =>
+                options.UseMySql(connectionString, Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.44-mysql")));
 
             // Add JWT Authentication
             var jwtSettings = builder.Configuration.GetSection("Jwt");

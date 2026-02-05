@@ -45,8 +45,9 @@ public partial class etour_dbContext : DbContext
         if (!optionsBuilder.IsConfigured)
         {
             // Fallback connection string - update this password to match your MySQL setup
-            optionsBuilder.UseMySql("server=localhost;database=etour_db;user=root;password=root", 
-                Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.44-mysql"));
+            // WARNING: This is a fallback! Ensure appsettings.json is used in production.
+            // optionsBuilder.UseMySql("server=localhost;database=etour_db;user=root;password=root", 
+            //     Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.44-mysql"));
         }
     }
 
