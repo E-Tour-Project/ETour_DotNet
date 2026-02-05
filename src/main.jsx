@@ -10,9 +10,9 @@ import ErrorBoundary from './components/ErrorBoundary.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
-      <LanguageProvider>
+      {/* <LanguageProvider> */}
         <App />
-      </LanguageProvider>
+      {/* </LanguageProvider> */}
     </ErrorBoundary>
   </StrictMode>,
 )

@@ -2,12 +2,27 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { loginCustomer } from '../api/customerApi';
 import { login } from '../utils/auth';
-import { useLanguage } from '../context/LanguageContext';
+// import { useLanguage } from '../context/LanguageContext';
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { t } = useLanguage();
+  // const { t } = useLanguage();
+  const t = (key) => {
+    const translations = {
+      'app.name': 'E-Tour',
+      'login.title': 'Welcome Back',
+      'login.subtitle': 'Enter your credentials to access your account',
+      'login.email': 'Email Address',
+      'login.password': 'Password',
+      'login.button': 'Sign In',
+      'login.signing_in': 'Signing in...',
+      'login.no_account': "Don't have an account?",
+      'login.register': 'Sign up',
+      'login.error': 'Invalid email or password'
+    };
+    return translations[key] || key;
+  };
 
   const [formData, setFormData] = useState({
     email: '',

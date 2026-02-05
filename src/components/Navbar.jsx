@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { getCustomerName, getCustomerRole, subscribeToAuthChanges, logout as authLogout } from "../utils/auth";
-import LanguageSwitcher from "./LanguageSwitcher";
+// import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -123,7 +123,7 @@ const Navbar = () => {
 
         {/* Right Section: Auth */}
         <div className="flex items-center gap-6">
-          {location.pathname === '/login' && <LanguageSwitcher />}
+          {/* {location.pathname === '/login' && <LanguageSwitcher />} */}
 
           {customerName ? (
             <div className="relative group">
