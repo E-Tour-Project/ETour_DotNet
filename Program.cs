@@ -17,7 +17,7 @@ public class Program
         // 0. Serilog BOOTSTRAP
         // ========================================
         Log.Logger = new LoggerConfiguration()
-            // .WriteTo.Console()
+            .WriteTo.Console()
             .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
             .CreateLogger();
 

@@ -8038,3 +8038,9 @@ WHERE `c`.`subcategory_id` IS NULL
 2026-02-05 12:07:28.265 +05:30 [INF] Executed endpoint 'Etour_Backend_dotnet.Controllers.CategoryController.GetMainCategories (Etour_Backend_dotnet)'
 2026-02-05 12:07:28.265 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/categories - 200 1114 application/json; charset=utf-8 3.2971ms
 2026-02-05 12:07:38.169 +05:30 [INF] Application is shutting down...
+2026-02-05 23:57:39.930 +05:30 [INF] User profile is available. Using 'C:\Users\Tanmay Karangutkar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-05 23:57:40.272 +05:30 [INF] Now listening on: http://localhost:5014
+2026-02-05 23:57:40.278 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 23:57:40.279 +05:30 [INF] Hosting environment: Development
+2026-02-05 23:57:40.279 +05:30 [INF] Content root path: C:\Users\Tanmay Karangutkar\Desktop\finaldotnet\etour-backend
+2026-02-05 23:59:56.388 +05:30 [INF] Application is shutting down...
